@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 100px;
+            max-width: 500px;
+        }
+        .card {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Crop Prediction</h2>
+        <div class="card">
+            <form action="/predict" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="N">Nitrogen:</label>
+                            <input type="number" class="form-control" name="N">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="P">Phosphorous:</label>
+                            <input type="number" class="form-control" name="P">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="K">K(Potasssium):</label>
+                            <input type="number" class="form-control" name="K">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="temperature">Temperature(C):</label>
+                            <input type="number" class="form-control" name="temperature">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="humidity">Humidity (%):</label>
+                            <input type="number" class="form-control" name="humidity">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ph">pH (1-7):</label>
+                            <input type="number" step="0.01" class="form-control" name="ph">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="rainfall">Rainfall (in mm):</label>
+                            <input type="number" class="form-control" name="rainfall">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Predict</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
